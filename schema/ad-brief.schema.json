@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AdsTurbo/product-page-to-ad-brief/schema/ad-brief.schema.json",
+  "title": "Product Page To Ad Brief",
+  "type": "object",
+  "required": ["productName", "audience", "platform", "durationSeconds", "angles", "scripts", "storyboard", "adsturboPrompt"],
+  "properties": {
+    "productName": { "type": "string" },
+    "productUrl": { "type": "string" },
+    "audience": { "type": "string" },
+    "platform": { "type": "string" },
+    "durationSeconds": { "type": "integer" },
+    "angles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "description"],
+        "properties": {
+          "title": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "scripts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["hook", "problem", "demo", "proof", "cta"],
+        "properties": {
+          "hook": { "type": "string" },
+          "problem": { "type": "string" },
+          "demo": { "type": "string" },
+          "proof": { "type": "string" },
+          "cta": { "type": "string" }
+        }
+      }
+    },
+    "storyboard": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["start", "end", "visual", "caption", "purpose"],
+        "properties": {
+          "start": { "type": "integer" },
+          "end": { "type": "integer" },
+          "visual": { "type": "string" },
+          "caption": { "type": "string" },
+          "voiceover": { "type": "string" },
+          "purpose": { "type": "string" }
+        }
+      }
+    },
+    "adsturboPrompt": { "type": "string" },
+    "complianceNotes": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
