@@ -1,0 +1,37 @@
+{
+  "name": "product-page-to-ad-brief",
+  "version": "0.1.0",
+  "description": "Turn product page details into video ad briefs, UGC scripts, storyboards, and AdsTurbo-ready prompts.",
+  "type": "module",
+  "bin": {
+    "product-page-to-ad-brief": "./bin/product-page-to-ad-brief.js"
+  },
+  "scripts": {
+    "start": "node bin/product-page-to-ad-brief.js --input examples/sample-input.json",
+    "sample": "node bin/product-page-to-ad-brief.js --input examples/sample-input.json --output examples/sample-output.md",
+    "sample:json": "node bin/product-page-to-ad-brief.js --input examples/sample-input.json --format json",
+    "test": "node bin/product-page-to-ad-brief.js --input examples/sample-input.json --format json >/tmp/product-page-to-ad-brief-test.json"
+  },
+  "keywords": [
+    "ad-creative",
+    "video-ads",
+    "ugc-ads",
+    "tiktok-ads",
+    "shopify",
+    "storyboard",
+    "adsturbo"
+  ],
+  "author": "AdsTurbo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdsTurbo/product-page-to-ad-brief.git"
+  },
+  "homepage": "https://adsturbo.ai/tools/product-page-to-ad-brief",
+  "bugs": {
+    "url": "https://github.com/AdsTurbo/product-page-to-ad-brief/issues"
+  }
+}
